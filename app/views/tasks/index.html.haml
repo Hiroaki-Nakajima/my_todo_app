@@ -1,0 +1,19 @@
+.container
+  .container__new
+    %h2 タスクの登録
+    = form_with model: @task do |f|
+      = f.text_field :title, placeholder: "タイトル"
+      %br
+      = f.text_area :content
+      %br
+      = f.submit
+  .container__tasks
+    %h2 タスクの表示
+    - @tasks.each do |task|
+      %h3
+        = task.title
+        %br
+      = simple_format(task.content)
+      %br
+  .container__saves
+    %h2 保存リスト

@@ -1,0 +1,13 @@
+.container {
+  display: flex;
+    width: 100vw;
+  &__new {
+    width: 60%;
+  }
+  &__tasks {
+    width: 20%;
+  }
+  &__saves {
+    width: 20%;
+  }
+}
