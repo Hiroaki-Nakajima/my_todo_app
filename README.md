@@ -28,9 +28,10 @@ Things you may want to cover:
   - 新規作成後タスク登録
   ![61227aa83accd8e1c54810ebcb0d5bae](https://user-images.githubusercontent.com/60601764/77878023-4bc1b880-7292-11ea-998a-a60935179f26.gif)
   - 作成したタスクを編集し備忘録として保存
-  ![15a59d22a8e0f2cbf3ae43321bca3092](https://user-images.githubusercontent.com/60601764/77878070-62680f80-7292-11ea-80ee-f92ba879005d.gif)
-  - 備忘録から外部リンク
   ![250dd91b13086f107d032d8da6891bfa](https://user-images.githubusercontent.com/60601764/77878060-5d0ac500-7292-11ea-8fec-e312eae6ff9d.gif)
+  - 備忘録から外部リンク
+  ![15a59d22a8e0f2cbf3ae43321bca3092](https://user-images.githubusercontent.com/60601764/77878070-62680f80-7292-11ea-80ee-f92ba879005d.gif)
+  
 
 * point
   - 1つの入力フォームから保存先を選択できる
