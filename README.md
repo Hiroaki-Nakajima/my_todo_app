@@ -29,6 +29,8 @@ Things you may want to cover:
   https://gyazo.com/61227aa83accd8e1c54810ebcb0d5bae
   - 作成したタスクを編集し備忘録として保存
   https://gyazo.com/250dd91b13086f107d032d8da6891bfa
+  - 備忘録から外部リンク
+  https://gyazo.com/15a59d22a8e0f2cbf3ae43321bca3092
 
 * point
   - 1つの入力フォームから保存先を選択できる
