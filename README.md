@@ -26,11 +26,11 @@ Things you may want to cover:
   - よりスピーディーな必要知識の検索
 * DEMO
   - 新規作成後タスク登録
-  ![image](https://user-images.githubusercontent.com/60601764/77876464-03a09700-728e-11ea-88b9-977c40d78de6.png)
+  ![61227aa83accd8e1c54810ebcb0d5bae](https://user-images.githubusercontent.com/60601764/77878023-4bc1b880-7292-11ea-998a-a60935179f26.gif)
   - 作成したタスクを編集し備忘録として保存
-  ![image](https://user-images.githubusercontent.com/60601764/77876490-12874980-728e-11ea-9bc1-88fda3664b7c.png)
+  ![15a59d22a8e0f2cbf3ae43321bca3092](https://user-images.githubusercontent.com/60601764/77878070-62680f80-7292-11ea-80ee-f92ba879005d.gif)
   - 備忘録から外部リンク
-  ![image](https://user-images.githubusercontent.com/60601764/77876505-1f0ba200-728e-11ea-8b3a-fac80dd0618f.png)
+  ![250dd91b13086f107d032d8da6891bfa](https://user-images.githubusercontent.com/60601764/77878060-5d0ac500-7292-11ea-8fec-e312eae6ff9d.gif)
 
 * point
   - 1つの入力フォームから保存先を選択できる
