@@ -12,7 +12,10 @@ Things you may want to cover:
   - Rails 5.2.4.2
 
 * Name
-  - Corner
+  - my_todo_app
+
+* URL
+  - http://52.193.92.173/
 
 * Overview
   - タスクと学習した知識を管理するアプリケーション
