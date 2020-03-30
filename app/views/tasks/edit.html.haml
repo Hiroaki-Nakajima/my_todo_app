@@ -12,9 +12,9 @@
           %i.fas.fa-trash-alt.fa-lg
       
   .container__new
-    .new-content
+    .new-content 
       = form_with model: @task do |f|
-        = f.text_field :title, placeholder: "タイトル", class: "new-content__title"
+        = f.text_field :title, class: "new-content__title"
         %br
         = f.text_area :content, class: "new-content__content"
         %br
@@ -24,6 +24,8 @@
         %label.task-label
           %i.fas.fa-book.fa-2x.input-icon
           = f.submit value: "記事として保存", name: "article", class: "new-content__bbtn"
+        = link_to "/tasks/#{params[:id]}", method: :delete do
+          %i.fas.fa-trash-alt.fa-2x.input-icon
 
   .container__articles
     - @articles.each do |article|

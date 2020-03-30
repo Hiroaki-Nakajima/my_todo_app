@@ -12,18 +12,17 @@
           %i.fas.fa-trash-alt.fa-lg
       
   .container__new
-    .new-content
-      = form_with model: @task do |f|
-        = f.text_field :title, placeholder: "タイトル", class: "new-content__title"
+    .new-content 
+      = form_with model: @article do |f|
+        = f.text_field :title, class: "new-content__title"
         %br
-        = f.text_area :content, class: "new-content__content"
+        = raw Rinku.auto_link(h(f.text_area :content, class: "new-content__content"))
         %br
-        %label.task-label
-          %i.fas.fa-tasks.fa-2x.input-icon
-          = f.submit value: "タスクを登録", class: "new-content__abtn"
         %label.task-label
           %i.fas.fa-book.fa-2x.input-icon
-          = f.submit value: "記事として保存", name: "article", class: "new-content__bbtn"
+          = f.submit class: "new-content__bbtn"
+        = link_to "/articles/#{params[:id]}", method: :delete do
+          %i.fas.fa-trash-alt.fa-2x.input-icon
 
   .container__articles
     - @articles.each do |article|

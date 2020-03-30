@@ -1,0 +1,8 @@
+.container__articles
+  - @articles.each do |article|
+    .content-box  
+      %h3
+        = article.title
+        %br
+      = simple_format(article.content)
+      %br
