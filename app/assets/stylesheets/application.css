@@ -26,9 +26,16 @@ header {
 
 a {
   text-decoration: none;
+  color: gray;
 }
 
 header {
   width: 100vw;
   height: 50px;
+}
+
+.top-page {
+  color: white;
+  text-align: center;
+  font-size: 50px;
 }
