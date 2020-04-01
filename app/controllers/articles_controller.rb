@@ -2,15 +2,15 @@ class ArticlesController < ApplicationController
   def show
     @article = Article.find(params[:id])
 
-    @tasks = Task.all.order("created_at DESC")
-    @articles = Article.all.order("created_at DESC")
+    @tasks = current_user.tasks.order("created_at DESC")
+    @articles = current_user.articles.order("created_at DESC")
   end
 
   def edit
     @article = Article.find(params[:id])
     
-    @tasks = Task.all.order("created_at DESC")
-    @articles = Article.all.order("created_at DESC")
+    @tasks = current_user.tasks.order("created_at DESC")
+    @articles = current_user.articles.order("created_at DESC")
   end
 
   def update

@@ -2,9 +2,9 @@ class TasksController < ApplicationController
 
   def index
     @task = Task.new
-    3.times{@task.task_images.build}
-    @tasks = Task.all.order("created_at DESC")
-    @articles = Article.all.order("created_at DESC")
+    
+    @tasks = current_user.tasks.order("created_at DESC")
+    @articles = current_user.articles.order("created_at DESC")
   end
 
   def create
@@ -20,15 +20,15 @@ class TasksController < ApplicationController
   def show
     @task = Task.find(params[:id])
 
-    @tasks = Task.all.order("created_at DESC")
-    @articles = Article.all.order("created_at DESC")
+    @tasks = current_user.tasks.order("created_at DESC")
+    @articles = current_user.articles.order("created_at DESC")
   end
 
   def edit
     @task = Task.find(params[:id])
     
-    @tasks = Task.all.order("created_at DESC")
-    @articles = Article.all.order("created_at DESC")
+    @tasks = current_user.tasks.order("created_at DESC")
+    @articles = current_user.articles.order("created_at DESC")
   end
 
   def update
@@ -50,6 +50,6 @@ class TasksController < ApplicationController
 
   private
   def task_params
-    params.require(:task).permit(:content, :title, task_images_attributes: [:image])
+    params.require(:task).permit(:content, :title).merge(user_id: current_user.id)
   end
 end
