@@ -11,8 +11,16 @@
   %body
     %header
       - if user_signed_in?
-        = link_to destroy_user_session_path, method: :delete do
-          %i.fas.fa-sign-out-alt.fa-2x.icon
-        = link_to root_path do
-          %i.fas.fa-edit.fa-2x.icon
+        .header-left
+          = link_to destroy_user_session_path, method: :delete do
+            %i.fas.fa-sign-out-alt.fa-2x.icon
+        .header-center
+          = link_to root_path do
+            %i.fas.fa-edit.fa-2x.icon
+        .header-right
+          = form_with url: articles_searches_path, local: true, method: :get do |f|
+            = f.text_field :keyword, placeholder: "Bookを検索する", class: "search-form"
+            %label
+              %i.fas.fa-search.fa-lg.icon
+              = f.submit class: "new-content__bbtn"
     = yield

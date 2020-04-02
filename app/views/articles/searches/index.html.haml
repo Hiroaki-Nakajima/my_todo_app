@@ -1,0 +1,30 @@
+.container
+  .container__tasks
+    - @tasks.each do |task|
+      .content-box
+        = task.created_at.strftime('%Y/%m/%d')
+        = link_to "/tasks/#{task.id}" do
+          %h3
+            %radio_button
+            = task.title
+        = simple_format(task.content)
+        = link_to "/tasks/#{task.id}", method: :delete do
+          %i.fas.fa-trash-alt.fa-lg
+      
+  .container__new
+    .new-content 
+      %h2.new-content__title
+        = @article.title
+        %br
+      .new-content__content
+        = simple_format(raw Rinku.auto_link(h(@article.content)))
+        %br
+        = link_to "/articles/#{params[:id]}/edit", method: :get do
+          %i.fas.fa-edit.fa-lg
+        
+  .container__articles
+    - @articles.each do |article|
+      .content-box 
+        = link_to "/articles/#{article.id}" do
+          %h3
+            = article.title
