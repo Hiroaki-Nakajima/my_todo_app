@@ -1,12 +1,17 @@
 .icon {
   color: white;
   margin: 10px;
+  cursor: pointer;
 }
 
 .container {
   display: flex;
   width: 100vw;
   height: calc(100vh - 50px);
+  &__tasks {
+    width: 20%;
+    overflow: scroll;
+  }
   &__new {
     width: 60%;
     overflow: scroll;
@@ -15,10 +20,6 @@
     margin: 10px;
     padding: 10px;
     background-color: white;
-  }
-  &__tasks {
-    width: 20%;
-    overflow: scroll;
   }
   &__articles {
     width: 20%;
