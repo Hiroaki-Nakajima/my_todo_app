@@ -12,19 +12,28 @@
           %i.fas.fa-trash-alt.fa-lg
       
   .container__new
-    .new-content 
-      %h2.new-content__title
-        = @article.title
-        %br
-      .new-content__content
-        = simple_format(raw Rinku.auto_link(h(@article.content)))
-        %br
-        = link_to "/articles/#{params[:id]}/edit", method: :get do
-          %i.fas.fa-edit.fa-lg
+    - if @article.blank?
+      .new-content 
+        %h2.new-content__title
+          該当するBookはありません
+    - else
+      .new-content 
+        %h2.new-content__title
+          = @article.title
+          %br
+        .new-content__content
+          = simple_format(raw Rinku.auto_link(h(@article.content)))
+          %br
+          = link_to "/articles/#{params[:id]}/edit", method: :get do
+            %i.fas.fa-edit.fa-lg
         
   .container__articles
-    - @articles.each do |article|
-      .content-box 
-        = link_to "/articles/#{article.id}" do
-          %h3
-            = article.title
+    - if @article.blank?
+      .content-box
+        %h3 該当なし
+    - else
+      - @articles.each do |article|
+        .content-box 
+          = link_to "/articles/#{article.id}" do
+            %h3
+              = article.title
