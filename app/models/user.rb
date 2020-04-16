@@ -3,4 +3,6 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   has_many :tasks, dependent: :destroy
   has_many :articles, dependent: :destroy
+
+  validates :name, presence: true, length: { maximum: 10 }
 end
