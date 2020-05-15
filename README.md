@@ -14,9 +14,6 @@ Things you may want to cover:
 * Name
   - my_todo_app
 
-* URL
-  - http://52.193.92.173/
-
 * Overview
   - タスクと学習した知識を管理するアプリケーション
   - 同一の入力フォームから異なるテーブルへデータ保存 => タスク(短期メモ)or学習した知識(長期保存)
